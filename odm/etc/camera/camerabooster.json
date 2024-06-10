@@ -1,0 +1,62 @@
+{
+    "version": "1.0",
+    "product": "taoyao",
+    "support": {
+            "inhibit_3rdprocs_enable": true,
+            "perceptible_support": true,
+            "oom_update_support": true,
+            "inhibit_dynamic_enable": true,
+            "skip_camera_boost": true
+        },
+    "oom": {
+            "oom_level": "51200:0,89600:100,128000:200,179200:251,262144:701,393216:800",
+            "psi_level": "28,20,13,8"
+        },
+    "threshold": {
+            "skip_task": 3,
+            "skip_task_lower": 1,
+            "lowAdj_threshold": 0,
+            "3rd_lowAdj_threshold": 50,
+            "intercept_restart_time": 3000,
+            "kill_lowprio_sysapp_threshlod": 10240,
+            "kill_highprio_sysapp_threshlod": 30720,
+            "kill_tag": 31,
+            "3rdcam_boost_threshold": 1363148,
+            "cam_boost_threshold": 2097152,
+            "3rd_skip_task_lower": 1,
+            "dynamic_interval": 10000,
+            "update_state_delay_ms": 3000
+        },
+    "configs": [
+        {
+            "name": "perceptible_list",
+            "config": [
+                "com.tencent.mm",
+                "com.miui.gallery",
+                "com.miui.personalassistant",
+                "com.miui.screenrecorder"
+            ]
+        },
+        {
+            "name": "inhibit_app_list",
+            "config": [
+                "com.google.android.providers.media.module",
+                "com.android.providers.media.module",
+                "com.sohu.inputmethod.sogou.xiaomi",
+                "com.google.android.inputmethod.latin",
+                "com.google.android.googlequicksearchbox:search",
+                "com.google.android.gms.persistent"
+            ]
+        }
+    ],
+    "oom_6Gmem": {
+            "oom_level": "18432:0,23040:100,27648:200,85000:250,127500:800,161280:950"
+        },
+    "threshold_6Gmem": {
+            "cam_boost_threshold": 1363148,
+            "3rdcam_boost_threshold": 1048576,
+            "skip_task": 2,
+            "skip_task_lower":1,
+            "3rd_skip_task_lower": 1
+        }
+}
